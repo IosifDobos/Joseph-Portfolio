@@ -1,0 +1,1267 @@
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Book.ttf');
+  font-weight: 400;
+}
+
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-decoration: none;
+  outline: none; */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+p.success {
+  color: green;
+}
+
+p.danger {
+  color: red;
+}
+
+.btn-md{
+  display: inline-block;
+  background: #FEC544;
+  color: #08080A;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px 20px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: 2px solid #FEC544;
+  transition: all 0.3s ease;
+}
+
+.link-btn a {
+  text-decoration: none;
+}
+
+.link-btn .btn-space {
+  margin-right: 25px;
+}
+
+.btn-md:hover{
+  color: #FEC544;
+  background: none;
+}
+
+.title::before{
+  content: '';
+  background: #07080B;
+  height: 2px;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  transform: translateY(44px);
+}
+
+.title::after{
+  content: '';
+  background: #07080B;
+  height: 7px;
+  width: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  display: block;
+  transform: translateY(1px);
+}
+
+/* ----------------------------------------
+* 1. Navbar Css 
+---------------------------------------- */
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+  color: #FEC544 !important;
+}
+
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-left: 14px;
+}
+
+.social-icon a {
+  width: 45px;
+  height: 45px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid #FEC544;
+}
+
+.social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #FEC544;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+
+.social-icon a img {
+  width: 50%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+.navbar-text button {
+  font-weight: 700;
+  color: #FEC544;
+  border: 1px solid #FEC544;
+  padding: 10px 24px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-text button span {
+  z-index: 1;
+}
+
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #FEC544;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-text button:hover {
+  color: #121212;
+}
+
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #FEC544;
+  transition: all 300ms linear;
+  top: -2px;
+}
+
+nav.navbar .navbar-toggler-icon:focus {
+  border-bottom: 2px solid #FEC544;
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #FEC544;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
+}
+
+nav.navbar .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  background-color: #FEC544;
+  height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #FEC544;
+  height: 2px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+/* ----------------------------------------------
+* 2. Home CSS 
+-----------------------------------------------*/
+.banner {
+  margin-top: 0;
+  padding: 250px 0 120px 0;
+  background-image: url('./assets/img/background.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.banner .title-name {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.banner .job-description {
+  font-size: 40px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.banner .job-description span {
+  color: #FEC544;
+}
+
+.banner p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+  text-align: justify;
+}
+
+.banner img {
+ animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.banner .link-btn {
+  border-radius: 25px;
+}
+
+.banner .link-btn a{
+  text-decoration: none;
+}
+
+.banner .link-btn .btn-space{
+  margin-right: 25px;
+}
+
+/* ----------------------------------------------
+* 3. About CSS 
+-----------------------------------------------*/
+.about {
+  background: #07080B;
+  margin: auto;
+  padding-bottom: 75px;
+  z-index: 10;
+}
+
+.about .title::before{
+  background: #FEC544;
+}
+
+.about .title::after{
+  background: #FEC544;
+}
+
+.about h1{
+  color: #6e6e70;
+  text-align: center;
+  font-size: 80px;
+  transform: translateY(20px);
+  opacity: 0.1;
+  padding-top: -20px;
+}
+
+.about h5{
+  font-weight: 700;
+  transform: translateY(-65px);
+}
+
+.about .about-content .left img{
+  height: 450px;
+  width: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about .about-content .right{
+  color: #A9ADB8;
+}
+
+.about .about-content .right .text{
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.about .about-content .right p {
+  text-align: justify;
+}
+.about .about-content .right .text span {
+  color: #FEC544;
+}
+
+.about .contact-section {
+  text-align: center;
+}
+
+.about .contact-section h2{
+  color: #6e6e70;
+}
+
+.about .contact-section p span{
+  font-size: 18px;
+  color: #A9ADB8;
+  letter-spacing: 0.8s;
+  line-height: 1.5em;
+}
+
+.about .download-btn{
+  text-align: center;
+}
+
+
+
+/* ----------------------------------------------
+* 4. Services CSS 
+-----------------------------------------------*/
+.services{
+  color: #A9ADB8;
+  background: #FEC544;
+  padding-bottom: 250px;
+}
+
+.services .service-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-60px);
+}
+
+.services h5{
+  font-weight: 700;
+  color: #07080B;
+  transform: translateY(-65px);
+}
+.services h1 {
+  color: #07080B;
+  text-align: center;
+  font-size: 80px;
+  transform: translateY(23px);
+  opacity: 0.1;
+  padding-top: -20px;
+}
+
+.services .service-content .main{
+  width: calc(30% - 20px);
+  min-height: 450px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.service{
+  background: #07080B;
+  padding: 30px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px -15px #07080B;
+  transition: transform 0.8s;
+}
+.service-logo{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: -90px auto 0;
+  background: #07080B;
+  border: 18px solid #FEC544;
+  transform: transform 1s;
+}
+
+.service-logo i {
+  color: #FEC544;
+  width: 50px;
+  margin-top: 20px;
+}
+
+.service h4{
+  height: 28px;
+  width: 80%;
+  background: #07080B;
+  margin: 60px auto;
+  position: relative;
+}
+
+.service h4::after{
+  content: '';
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to right, #07080B, #FEC544);
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: -1;
+}
+
+.service h4::before {
+  content: '';
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to right, #FEC544, #07080B);
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+.shadow-one {
+  height: 200px;
+  width: 80%;
+  background: #07080B;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 10%;
+  z-index: -1;
+  box-shadow: 0 0 20px -15px #07080B;
+  transition: transform 0.8s;
+}
+
+.shadow-two {
+  height: 200px;
+  width: 64%;
+  background: #07080B;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 18%;
+  z-index: -2;
+}
+
+.main:hover .service{
+  transform: translateY(-50px);
+}
+
+.main:hover .shadow-one{
+  transform: translateY(-25px);
+}
+
+/* ----------------------------------------------
+* 5. Skills CSS 
+-----------------------------------------------*/
+.skills{
+  padding: 0 0 50px 0;
+  position: relative;
+}
+
+.skill-bx{
+  background: #4a4a4c;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -175px;
+}
+
+.skills h2{
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.skills p{
+  color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 10px 0 25px 0;
+}
+
+.skill-slider{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0 0 0;
+}
+
+.skill-slider .item img{
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+
+.background-image-left{
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
+/* ----------------------------------------------
+* 6. Resume CSS 
+-----------------------------------------------*/
+.resume{
+  padding: 40px 0;
+  position: relative;
+  background: #08080A;
+}
+
+.resume .nav.nav-pills{
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+
+.resume .nav.nav-pills .nav-item{
+  width: 50%;
+}
+
+.resume .nav.nav-pills .nav-link{
+  background-color: transparent;
+  border-radius: 0;
+  padding: 15px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+
+.resume .nav.nav-pills .nav-link::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.resume .nav.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+
+.resume .nav.nav-pills .nav-link.active{
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nav-link#resume-tab-tab-first{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+
+.nav-link#resume-tab-tab-second {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+
+.resume h1{
+  color: #A9ADB8;
+  text-align: center;
+  font-size: 80px;
+  transform: translateY(20px);
+  opacity: 0.2;
+  padding-top: -20px;
+}
+
+.resume h5{
+  font-weight: 700;
+  transform: translateY(-60px);
+}
+
+.resume .title::before {
+  background: #FEC544;
+}
+
+.resume .title::after {
+  background: #FEC544;
+}
+
+.resume .tab-content{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.resume .info{
+  font: 18px/24px 'librebaskerville-italic', serif;
+    color: #A9ADB8;
+    margin-bottom: 18px;
+    margin-top: 9px;
+}
+
+.resume .info span{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#resume .date {
+  font: 15px/24px 'opensans-regular', sans-serif;
+  margin-top: 6px;
+}
+
+.background-image-right{
+      top: 20%;
+      position: absolute;
+      bottom: 0;
+      width: 35%;
+      right: 0;
+      z-index: -4;
+}
+
+/* ---------------------------------------------- * 
+* 7. Projects CSS 
+-------------------------------------------------*/
+.projects{
+  padding: 50px 0;
+  position: relative;
+  background: black;
+}
+
+.projects h1{
+  color: #6e6e70;
+  text-align: center;
+  font-size: 80px;
+  transform: translateY(20px);
+  opacity: 0.1;
+  padding-top: -20px;
+}
+
+.projects h5{
+  font-weight: 700;
+  transform: translateY(-65px);
+}
+
+.projects p{
+  color: #B8B8B8;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5rem;
+  margin-top: -75px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.projects .title::before{
+  background: #FEC544;
+}
+
+.projects .title::after {
+  background: #FEC544;
+}
+.project-img-bx{
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.project-img-bx::before{
+  content: '';
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.project-img-bx:hover::before{
+  height: 100%;
+}
+
+.project-txt{
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.project-img-bx:hover .project-txt{
+  top: 50%;
+  opacity: 1;
+}
+
+.project-txt h4{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.project-txt span{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+
+/* ---------------------------------------------- * 
+* 8. Projects CSS 
+-------------------------------------------------*/
+.testimonials{
+  color: #A9ADB8;
+  /* background: #FEC544; */
+  padding-bottom: 80px;
+}
+
+.testimonials h5 {
+  font-weight: 700;
+  color: #07080B;
+  transform: translateY(-65px);
+}
+
+.testimonials h1 {
+  color: #A9ADB8;
+  text-align: center;
+  font-size: 80px;
+  transform: translateY(20px);
+  opacity: 0.2;
+  padding-top: -20px;
+}
+
+.testimonials .title::before {
+  background: #FEC544;
+}
+
+.testimonials .title::after {
+  background: #FEC544;
+}
+
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+
+.testimonials .text {
+  padding-top: 25px;
+}
+
+.testimonials .rounded-circle{
+  background: #6e6e70;
+  width: 200px;
+  height: 200px;
+}
+
+.testimonials .carousel .carousel-indicators{
+  top: 375px;
+}
+
+
+
+/* ---------------------------------------------- * 
+* 9. Contact CSS 
+-------------------------------------------------*/
+section {
+  padding: 40px 0;
+  background: #07080B;
+}
+
+.contact h1 {
+  color: #6e6e70;
+  text-align: center;
+  font-size: 80px;
+  transform: translateY(20px);
+  opacity: 0.1;
+  padding-top: -20px;
+}
+
+.contact h5 {
+  font-weight: 700;
+  transform: translateY(-65px);
+}
+
+.contact .title::before {
+  background: #FEC544;
+}
+
+.contact .title::after {
+  background: #FEC544;
+}
+
+.contact .contact-content .column {
+  margin-top: 40px;
+  width: calc(95% - 50px);
+}
+
+.contact .contact-content .left h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #A9ADB8;
+}
+
+.contact .contact-content .left .form-group input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #A9ADB8;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.contact .contact-content .left .form-group textarea {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.contact .contact-content .left .btn-md {
+  padding: 8px 18px;
+  font-size: 16px;
+}
+
+.contact .contact-content .right {
+  color: #A9ADB8;
+}
+
+.contact .contact-content .right h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.contact .contact-content .right p {
+  line-height: 1.6;
+}
+
+.contact .contact-content .right .items {
+  margin: 0 auto;
+}
+
+.contact .contact-content .right .items .item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.contact .contact-content .right .items .item img {
+  width: 60px;
+  height: 60px;
+  padding: 16px;
+  border: 1px solid #A9ADB8;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact .contact-content .right .items .item span {
+  font-size: 14px;
+}
+
+/* ---------------------------------------------- * 
+* 10. Footer CSS 
+-------------------------------------------------*/
+#footer {
+  text-align: center;
+  background: #FEC544;
+  padding: 20px 0;
+  color: #07080B;
+  font-weight: 700;
+}
+
+.footer-social-icon {
+  display: inline-block;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-social-icon a {
+  width: 50px;
+  height: 50px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(62, 61, 61, 0.5);
+}
+
+.footer-social-icon a::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgba(62, 61, 61, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.footer-social-icon a:hover::before {
+  transform: scale(1);
+}
+
+.footer-social-icon a img {
+  width: 50%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+/* ---------------------------------------------- * 
+* 11. CSS Media Queries 
+-------------------------------------------------*/
+/* On screens that are 992px or less */
+@media only screen and (max-width: 991px) {
+  .btn-md {
+    display: inline-block;
+    color: #08080A;
+    font-size: 24px;
+    padding: 8px;
+  }
+  /* ----------------------------------------------
+  * 1. Home CSS 
+  -----------------------------------------------*/
+  .banner .title-name{
+    font-size: 48px;
+  }
+  .banner .job-description{
+    font-size: 34px;
+  }
+
+  .banner img {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin-left: -150px;
+    bottom: -250px;
+    opacity: 0.2;
+  }
+  .banner .link-btn {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  /* ----------------------------------------------
+  * 2. About CSS 
+  -----------------------------------------------*/
+  .about .about-content .left img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* ----------------------------------------------
+  * 3. Services CSS 
+  -----------------------------------------------*/
+  .services .service-content{
+    display: inline-flexbox;
+    justify-content: center;
+  }
+  .services .service-content .main {
+    width: calc(75% - 20px);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left: 15px;
+  }
+}
+
+
+/* On screens that are 992px or less */
+@media only screen and (max-width: 600px) {
+  .btn-md {
+    display: inline-block;
+    color: #08080A;
+    font-size: 24px;
+    padding: 10px;
+  }
+  /* ----------------------------------------------
+  * 1. Home CSS 
+  -----------------------------------------------*/
+  .banner{
+    padding-left: 15px;
+  }
+  .banner .title-name{
+    font-size: 42px;
+  }
+
+  .banner .job-description{
+    font-size: 32px;
+  }
+
+  .banner .link-btn{
+    display: flex;
+    text-align: center;
+  }
+
+  .banner img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 0.2;
+    top: -500px;
+    margin-left: 10px;
+  }
+  /* ----------------------------------------------
+  * 2. About CSS 
+  -----------------------------------------------*/
+    .about .about-content .left img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .about .text{
+      text-align: center;
+    }
+
+    .about .about-content .right{
+      margin-top: 50px;
+    }
+    /* ----------------------------------------------
+    * 3. About CSS 
+    -----------------------------------------------*/
+    .resume .nav.nav-pills {
+      width: 78%;
+      margin: 0 auto;
+      border-radius: 50px;
+      background-color: rgb(255 255 255 / 10%);
+      overflow: hidden;
+    }
+
+    .resume .nav.nav-pills .nav-item {
+      width: 50%;
+    }
+
+    .resume .nav.nav-pills .nav-link {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 17px 0;
+      color: #fff;
+      width: 100%;
+      font-size: 17px;
+      letter-spacing: 0.8px;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s ease-in-out;
+      text-align: center;
+      z-index: 0;
+    }
+
+    /* ----------------------------------------------
+    * 4. Service CSS 
+    -----------------------------------------------*/
+  .services .service-content{
+    width: 100%;
+  }
+  .services .service-content{
+    display: inline-table;
+
+  }
+  .services .service-content .main {
+    width: calc(99% - 20px);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left: 15px;
+  }
+
+  /* ----------------------------------------------
+  * 6. Testimonials CSS 
+  -----------------------------------------------*/
+  .testimonials h1{
+    font-size: 54px;
+    transform: translateY(0px);
+    opacity: 0.1;
+  }
+
+  /* ----------------------------------------------
+  * 7. Contact CSS 
+  -----------------------------------------------*/
+  .contact .contact-content .column {
+    margin-left: 35px;
+  }
+
+  /* ----------------------------------------------
+  * 8. Footer CSS 
+  -----------------------------------------------*/
+  .footer .footer-social-icon {
+    margin-left: 10px;
+  }
+}
