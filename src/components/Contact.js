@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import TrackVisibility from 'react-on-screen';
+import { AiOutlineMail } from 'react-icons/ai';
 import 'animate.css';
 import emailjs from '@emailjs/browser';
-// assetest
+// assets
 import envContact from '../assets/svg/bx-envelope.svg';
 import phoneContact from '../assets/svg/bx-phone.svg';
 import mapContact from '../assets/svg/bx-map.svg';
@@ -17,9 +18,10 @@ export const Contact = () => {
     const [btnText, setBtnText] = useState('Submit');
     const [status, setStatus] = useState({});
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
+
+
         setBtnText('Sending...');
         // email content
         const emailContent = {
@@ -94,8 +96,11 @@ export const Contact = () => {
                                                     required
                                                 ></textarea>
                                             </div>
-                                            <button type="submit" className='btn-md'><span>{btnText}</span></button>
-                                            <div className="status-message">
+                                            <button type="submit" className='btn-md'>
+                                                <span>{btnText}</span>
+                                                <AiOutlineMail className='mail-icon' size={23} />
+                                            </button>
+                                            <div className="status-message ">
                                                 {status.message &&
                                                     <p className={status.success === false ? "danger" : "success"}>
                                                         {status.message}

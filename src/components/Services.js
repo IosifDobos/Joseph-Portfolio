@@ -1,5 +1,8 @@
 import React from "react";
 import { Container } from 'react-bootstrap';
+import { AiFillHtml5 } from 'react-icons/ai'
+import { FcTreeStructure } from 'react-icons/fc'
+import { SiAzuredevops } from 'react-icons/si'
 import 'animate.css';
 
 export const Services = () => {
@@ -12,7 +15,7 @@ export const Services = () => {
                     <div className="main" >
                         <div className="service">
                             <div className="service-logo">
-                                <i className="bx bxl-html-5 bx-lg"></i>
+                                <AiFillHtml5 size={80} className='icons' />
                             </div>
                             <h4>Web Development</h4>
                             <p> I have experience building websites using JavaScript, AngularJS, React,
@@ -26,7 +29,7 @@ export const Services = () => {
                     <div className="main" >
                         <div className="service">
                             <div className="service-logo">
-                                <i className="bx bxl-html-5 bx-lg"></i>
+                                <FcTreeStructure size={75} className='icons' />
                             </div>
                             <h4>Algorithm & Data Structures</h4>
                             <p>
@@ -42,7 +45,7 @@ export const Services = () => {
                     <div className="main">
                         <div className="service">
                             <div className="service-logo">
-                                <i className="bx bxl-html-5 bx-lg"></i>
+                                <SiAzuredevops size={75} className='icons' />
                             </div>
                             <h4>Dev Ops</h4>
                             <p>
