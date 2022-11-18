@@ -1,10 +1,14 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTypewriter } from 'react-simple-typewriter';
-import { AiFillGithub, AiFillBook } from 'react-icons/ai'
+import { AiFillGithub, AiFillFolderOpen } from 'react-icons/ai'
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
-// images
+// assets
+import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.svg'
+import navIcon4 from '../assets/img/nav-icon4.svg'
 import headerImg from '../assets/img/header-img.svg'
 
 export const Home = () => {
@@ -34,10 +38,16 @@ export const Home = () => {
                                         bellow or by visiting my GitHub page. Also, for more information about my
                                         work experience, kills and education, click on the Resume button bellow.
                                     </p>
+                                    <div className="social-icon">
+                                        <a href="https://www.linkedin.com/in/iosif-dobos/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
+                                        <a href="http://instagram.com/josephberelly" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="Instagram" /></a>
+                                        <a href="http://github.com/IosifDobos" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="GitHub" /></a>
+                                        <a href="https://gitlab.com/IosifDobos" target="_blank" rel="noopener noreferrer"><img src={navIcon4} alt="GitLab" /></a>
+                                    </div>
 
                                     <div className="link-btn">
-                                        <a href='#projects' role='button' aria-pressed='true' className='btn-md btn-space'><AiFillGithub size="25" className='proj-img' />Projects</a>
-                                        <a href="#resume" className="btn-md "><AiFillBook size="25" /> My Resume</a>
+                                        <a href='#projects' className='btn-md'>Projects<AiFillGithub size={25} className='icons' /></a>
+                                        <a href="#resume" className="btn-md btn-space">My Resume<AiFillFolderOpen size={25} className='icons' /></a>
                                     </div>
                                 </div>}
                         </TrackVisibility>

@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from 'react-bootstrap';
 import { AiFillDownCircle } from "react-icons/ai";
 import { useTypewriter } from 'react-simple-typewriter';
-// images
+// assets
 import aboutImg from '../assets/img/github_image.png';
 
 export const About = () => {
@@ -20,13 +20,13 @@ export const About = () => {
             <Container>
                 <h5 className="title text-center m-heading text-secondary">ABOUT ME</h5>
                 <Row className='about-content align-items-center'>
-                    <Col size={12} xs={12} md={4} xl={5}>
-                        <div className="column left">
+                    <Col size={12} xs={12} md={5} xl={6}>
+                        <div className="img-container">
                             <img src={aboutImg} alt="Joseph Dobos" />
                         </div>
                     </Col>
-                    <Col size={12} xs={12} md={8} xl={7}>
-                        <div className="column right">
+                    <Col size={12} xs={12} md={7} xl={6}>
+                        <div className="column-right">
                             <div className="text">I'm a <span>{text}</span></div>
                             <p>
                                 I'm a graduate student at Technological University Dublin with a
@@ -54,8 +54,8 @@ export const About = () => {
                             </Col>
                             <Col size={12} xs={12} md={6} xl={6}>
                                 <div className="link-btn">
-                                    <a type="button" href="https://drive.google.com/file/d/1kZzeo4SrKXJhEw53Djrv-_p0x6iKLqOv/view?ths=true" className="btn-md download-btn" target="_blank" rel="noopener noreferrer">
-                                        Download CV <AiFillDownCircle size={22} />
+                                    <a type="button" href="https://drive.google.com/file/d/1kZzeo4SrKXJhEw53Djrv-_p0x6iKLqOv/view?ths=true" className="btn-md" target="_blank" rel="noopener noreferrer">
+                                        Download CV<AiFillDownCircle size={25} className='icons' />
                                     </a>
                                 </div>
                             </Col>

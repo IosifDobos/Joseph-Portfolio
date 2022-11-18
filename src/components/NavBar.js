@@ -2,11 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-// assets
-// import navIcon1 from '../assets/img/nav-icon1.svg';
-// import navIcon2 from '../assets/img/nav-icon2.svg';
-// import navIcon3 from '../assets/img/nav-icon3.svg'
-// import navIcon4 from '../assets/img/nav-icon4.svg'
+
 
 export const NavBar = () => {
 
@@ -48,12 +44,6 @@ export const NavBar = () => {
                             <Nav.Link href='#testimonials' className={activeLink === 'testimonials' ? 'active navbar-link' : 'navbar-link'} onClick={() => updateActiveLink('testimonials')}>Testimonials</Nav.Link>
                         </Nav>
                         <span className='navbar-text'>
-                            {/* <div className="social-icon">
-                                <a href="https://www.linkedin.com/in/iosif-dobos/"><img src={navIcon1} alt="LinkedIn" /></a>
-                                <a href="http://instagram.com/josephberelly"><img src={navIcon2} alt="Instagram" /></a>
-                                <a href="http://github.com/IosifDobos"><img src={navIcon3} alt="GitHub" /></a>
-                                <a href="https://gitlab.com/IosifDobos"><img src={navIcon4} alt="GitLab" /></a>
-                            </div> */}
                             <HashLink to="#contact">
                                 <button className='vvd'><span>Let's Connect</span></button>
                             </HashLink>
