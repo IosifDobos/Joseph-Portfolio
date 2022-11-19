@@ -994,7 +994,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 * 9. Contact CSS 
 -------------------------------------------------*/
 section {
-  padding: 40px 0;
+  padding: 0px;
   background: #07080B;
 }
 
@@ -1022,13 +1022,13 @@ section {
 }
 
 .contact .contact-content .column {
-  margin-top: 40px;
+  margin-top: 15px;
   width: calc(95% - 50px);
 }
 
 .contact .contact-content .left h2 {
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #A9ADB8;
 }
 
@@ -1179,16 +1179,33 @@ section {
 /* ---------------------------------------------- * 
 * 11. CSS Media Queries 
 -------------------------------------------------*/
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
 /* On screens that are 992px or less */
 @media only screen and (max-width: 991px) {
-  /* .btn-md {
-    display: inline-block;
-    color: #08080A;
-    font-size: 24px;
-    padding: 8px;
-  } */
   /* ----------------------------------------------
-  * 1. Home CSS 
+  * 1. Navbar CSS 
+  -----------------------------------------------*/
+  nav.navbar {
+    padding: 12px 0;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .navbar-text button {
+    padding: 8px 18px;
+    font-size: 16px;
+    margin-left: 16px;
+  }
+  /* ----------------------------------------------
+  * 2. Home CSS 
   -----------------------------------------------*/
   .banner .title-name{
     font-size: 48px;
@@ -1213,7 +1230,7 @@ section {
   }
 
   /* ----------------------------------------------
-  * 2. About CSS 
+  * 3. About CSS 
   -----------------------------------------------*/
   .about .about-content .img-container {
     text-align: center;
@@ -1236,7 +1253,7 @@ section {
     }
 
   /* ----------------------------------------------
-  * 3. Services CSS 
+  * 4. Services CSS 
   -----------------------------------------------*/
   .services .service-content{
     display: inline-flexbox;
@@ -1249,14 +1266,64 @@ section {
     margin-bottom: 50px;
     margin-left: 15px;
   }
+
+  /* ----------------------------------------------
+  * 5. Modal Popup CSS 
+  -----------------------------------------------*/
+  .modal-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-background .modal-wrapper{
+    display: inline;
+    flex-direction: row;
+    width: 75%;
+    min-height: 40%;
+  }
+
+  .modal-wrapper .img-modal img {
+    border-radius: 0px 10px 0px 10px ;
+  }
+
+  .modal-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .modal-content span {
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 5px;
+    /* margin-bottom: 15px; */
+    text-align: left;
+  }
+
+  .modal-content .categories{
+    margin-top: 0px;
+  }
+
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    color: #07080B;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+  }
+
+  .modal-content .link-btn .btn-md{
+    margin-top: 0px;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
 }
 
-@media (min-width:1700px) {
-  main .container {
-    max-width: 100%;
-    padding: 0 150px;
-  }
-}
+
 
 /* On screens that are 992px or less */
 @media only screen and (max-width: 767px) {
