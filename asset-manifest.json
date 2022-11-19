@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Joseph-Portfolio/static/css/main.c9cc6d93.css",
+    "main.css": "/Joseph-Portfolio/static/css/main.b0e863c1.css",
     "main.js": "/Joseph-Portfolio/static/js/main.4a7c5a4a.js",
     "static/js/787.fb771931.chunk.js": "/Joseph-Portfolio/static/js/787.fb771931.chunk.js",
     "static/media/ms-skincare.png": "/Joseph-Portfolio/static/media/ms-skincare.8a6bf8e61c599bf01de8.png",
@@ -38,12 +38,12 @@
     "static/media/bx-map.svg": "/Joseph-Portfolio/static/media/bx-map.4c129c66e0b37a99fb700d8a889ae639.svg",
     "static/media/nav-icon1.svg": "/Joseph-Portfolio/static/media/nav-icon1.3555682bd159cbd97798bc52c6bf0cf8.svg",
     "static/media/bx-envelope.svg": "/Joseph-Portfolio/static/media/bx-envelope.be2a561d8c216df51eee49218eb2c449.svg",
-    "main.c9cc6d93.css.map": "/Joseph-Portfolio/static/css/main.c9cc6d93.css.map",
+    "main.b0e863c1.css.map": "/Joseph-Portfolio/static/css/main.b0e863c1.css.map",
     "main.4a7c5a4a.js.map": "/Joseph-Portfolio/static/js/main.4a7c5a4a.js.map",
     "787.fb771931.chunk.js.map": "/Joseph-Portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9cc6d93.css",
+    "static/css/main.b0e863c1.css",
     "static/js/main.4a7c5a4a.js"
   ]
 }
