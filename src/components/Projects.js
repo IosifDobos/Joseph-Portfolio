@@ -1,57 +1,52 @@
-import React, { useState } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React from 'react'
+import { motion } from 'framer-motion'
 import 'animate.css';
-// images
-import colorSharp2 from "../assets/img/color-sharp2.png";
 // data
 import projects from '../data/projects'
-// components
-import ModalPopup from './ModalPopup';
 
 export const Projects = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [tempdata, setTempdata] = useState({});
 
-    const getData = (id, title, shortDesc, description, imageUrl, demoUrl, githubUrl, tools) => {
-
-        const tempData = { id, title, shortDesc, description, imageUrl, demoUrl, githubUrl, tools };
-        setTempdata({ ...tempData });
-
-        return setShowModal(true);
-    }
     return (
         <section className='projects' id='projects'>
             <h1>PROJECTS</h1>
-            <Container>
-                <Row>
-                    <h5 className="title text-center m-heading text-secondary">PROJECTS</h5>
-                    <p>Check out some of my work!</p>
-                    {projects.map((project, index) => {
-                        return (
-                            <Col size={12} sm={12} md={6} lg={4} key={index}>
-                                <div className="project-img-bx" onClick={() => getData(project.id, project.title, project.shortDesc, project.description, project.imageUrl, project.demoUrl, project.githubUrl, project.tools)}>
-                                    <img src={project.imageUrl} alt={project.imageUrl} />
-                                    <div className="project-txt">
-                                        <h4>{project.title}</h4>
-                                        <span>{project.shortDesc}</span>
-                                        <div className="link-btn">
-                                            <i
-                                                className='fa fa-link'
-                                                data-toggle='modal'
-                                                data-target={project.id}
-                                                onClick={() => getData(project.id, project.title, project.shortDesc, project.description, project.imageUrl, project.demoUrl, project.githubUrl, project.tools)}
-                                            >
-                                            </i>
-                                        </div>
-                                    </div>
+            <h5 className="title text-center m-heading text-secondary">PROJECTS</h5>
+            <div className='subtitle'>Check out some of my work!</div>
+            <div className='relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
+                <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 ">
+                    {projects && projects?.map((project, index) => (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1.5 }}
+                            key={index}
+                            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"
+                        >
+                            <motion.img
+                                initial={{ y: -300, opacity: 0 }}
+                                transition={{ duration: 1.2 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className='project-img'
+                                src={project.imageUrl} alt={project.imageUrl}
+                            />
+                            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+                                <h4 className='text-4xl font-semibold text-center'>
+                                    <span className='underline decoration-[#F7AB0A]/50'>Case study {index + 1} of {projects.length}:</span>
+                                    {' '}{project.title}
+                                </h4>
+                                {/* <p className='text-center'>{project.shortDesc}</p> */}
+                                <p className='text-center md:text-left'>{project.description}</p>
+                                <p className='text-center'><i className='fa fa-tag'> </i> {project.tools}</p>
+                                <div className="link-btn text-center">
+                                    <a href={project.demoUrl} className="btn-md" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                    <a href={project.githubUrl} className="btn-md btn-space" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
-                            </Col>
-                        )
-                    })}
-                </Row>
-            </Container>
-            <ModalPopup tempData={tempdata} showModal={showModal} setShowModal={setShowModal} />
-            <img className="background-image-right" src={colorSharp2} alt="Background Img" />
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+                <div className='w-full absolute top[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12' />
+            </div >
         </section>
     )
 }
