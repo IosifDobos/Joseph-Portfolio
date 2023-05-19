@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import TrackVisibility from 'react-on-screen';
-import { AiOutlineMail } from 'react-icons/ai';
 import 'animate.css';
 import emailjs from '@emailjs/browser';
 // assets
@@ -98,7 +97,7 @@ export const Contact = () => {
                                             </div>
                                             <button type="submit" className='btn-md'>
                                                 <span>{btnText}</span>
-                                                <AiOutlineMail className='mail-icon' size={23} />
+                                                {/* <AiOutlineMail className='mail-icon' size={23} /> */}
                                             </button>
                                             <div className="status-message ">
                                                 {status.message &&

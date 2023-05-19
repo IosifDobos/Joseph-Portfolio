@@ -145,6 +145,11 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 
+nav.navbar .navbar-link.navbar-brand img{
+  width: 100px !important;
+  height: 50px !important;
+}
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -261,7 +266,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 * 2. Home CSS 
 -----------------------------------------------*/
 .banner {
-  margin-top: 0;
+  /* margin-top: 0; */
   padding-top: 250px;
   /* padding: 250px 0 120px 0; */
   background-image: url('./assets/img/background.jpg');
@@ -361,7 +366,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner .column-right {
-  text-align: center;
+  align-items: center;
+}
+.banner .column-right img {
+  opacity: 0.2;
 }
 
 /* ----------------------------------------------
@@ -374,6 +382,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: auto;
   padding-bottom: 75px;
   z-index: 10;
+  min-height: 100vh;
 }
 
 .about .title::before{
@@ -508,11 +517,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #07080B;
   border: 18px solid #FEC544;
   transform: transform 1s;
+
+}
+.service-logo .algo-icons {
+  position: relative;
+  top: 12px;
+  left: 6px;
 }
 
 .service-logo .icons {
   color: #FEC544;
-  margin-top: 10px;
+  position: relative;
+  left: 10px;
+  top: 10px
 }
 
 .service h4{
@@ -590,7 +607,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -175px;
+  margin-top: 25px;
 }
 
 .skills h2{
@@ -630,7 +647,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 * 6. Resume CSS 
 -----------------------------------------------*/
 .resume{
-  padding: 40px 0;
+  padding: 0px auto;
+  padding-bottom: 40px;
   position: relative;
   background: #08080A;
 }
@@ -752,9 +770,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 * 7. Projects CSS 
 -------------------------------------------------*/
 .projects{
-  padding: 50px 0;
+  padding: 20px 0;
   position: relative;
-  background: black;
+  background: #08080A;
+  min-height: 100vh;
 }
 
 .projects h1{
@@ -763,7 +782,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 80px;
   transform: translateY(20px);
   opacity: 0.1;
-  padding-top: -20px;
+  padding-top: 0px;
 }
 
 .projects h5{
@@ -772,14 +791,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: translateY(-65px);
 }
 
-.projects p{
+.projects .subtitle{
   color: #B8B8B8;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5rem;
   margin-top: -75px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -790,146 +809,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .projects .title::after {
   background: #FEC544;
 }
-.project-img-bx{
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  margin-bottom: 25px;
-  cursor: pointer;
+
+.projects .project-img {
+  width: 600px !important;
+  height: 350px !important;
 }
 
-.project-img-bx::before{
-  content: '';
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  opacity: 0.85;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
-}
-
-.project-img-bx:hover::before{
-  height: 100%;
-}
-
-.project-txt{
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-}
-
-.project-img-bx:hover .project-txt{
-  top: 50%;
-  opacity: 1;
-}
-
-.project-txt h4{
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-
-.project-txt span{
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
-
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
-/* ---------------------------------------------- * 
-* 7.1. Project Modal CSS 
--------------------------------------------------*/
-.modal-background{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  background: rgb(200, 200, 200, 0.4);
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* box-shadow: 0px 0px 18px 0px rgb(0, 0, 0, 0.75); */
-  /* border-radius: 8px; */
-} 
-
-.modal-wrapper {
-  width: 65%;
-  min-height: 400px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #07080B;
-  color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  z-index: 10;
-  border-radius: 10px;
-}
-
-.modal-wrapper .img-modal img{
-  width: 100%;
-  height: 100%;
-  border-radius: 10px 0 0 10px;
-}
-
-.modal-wrapper .modal-content {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  color: #B8B8B8;
-}
-
-.modal-content h2 {
-  font: 2em sans-serif;
-  font-weight: 700;
-}
-
-.modal-content span {
-  font: 1.1em sans-serif;
-  text-align: justify;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.modal-content .categories {
-  font: 14px/24px 'opensans-regular', sans-serif;
-  color: #A9ADB8;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
-  margin-top: 15px;
-}
-
-.close-btn{
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50px;
-}
-
-.close-btn :hover{
-  color: #FEC544;
+.projects .link-btn {
+  padding-bottom: 50px;
 }
 
 /* ---------------------------------------------- * 
@@ -938,7 +825,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .testimonials{
   color: #A9ADB8;
   /* background: #FEC544; */
-  padding-bottom: 80px;
+  padding: 25px 0 25px 0;
 }
 
 .testimonials h5 {
@@ -982,6 +869,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #6e6e70;
   width: 200px;
   height: 200px;
+}
+
+.testimonials .carousel .text-center .img-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .testimonials .carousel .carousel-indicators{
@@ -1195,13 +1088,13 @@ section {
   }
 
   nav.navbar .navbar-nav .nav-link.navbar-link {
-    padding: 0 20px;
-    font-size: 16px;
+    padding: 0 10px;
+    font-size: 14px;
   }
 
   .navbar-text button {
-    padding: 8px 18px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 14px;
     margin-left: 16px;
   }
   /* ----------------------------------------------
@@ -1217,7 +1110,7 @@ section {
   .banner .column-right img {
     width: 400px;
     height: 400px;
-    opacity: 0.2;
+    opacity: 0.1;
   }
   
   .banner .link-btn .btn-md {
@@ -1248,8 +1141,8 @@ section {
   }
 
     .about .link-btn .icons {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
 
   /* ----------------------------------------------
@@ -1340,28 +1233,36 @@ section {
     padding-left: 15px;
   }
   .banner .title-name{
-    font-size: 42px;
+    font-size:42px;
   }
 
   .banner .job-description{
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .banner .link-btn {
+    padding-bottom: 25px;
   }
 
   .banner .column-right img {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    margin-top: -500px;
-    margin-left: -15px;
-    opacity: 0.2;
+    display: none;
   }
 
   /* ----------------------------------------------
   * 2. About CSS 
   -----------------------------------------------*/
-    .about .about-content .left img {
-      height: 400px;
-      width: 400px;
+    .about .about-content .img-container {
+      display: flex;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    .about .about-content .img-container img {
+      height: 300px;
+      width: 300px;
       object-fit: cover;
       border-radius: 50%;
     }
@@ -1370,7 +1271,9 @@ section {
       font-size: 72px;
     }
 
-    .about .text{
+    .about .about-content .column-right .text{
+      padding-top: 20px;
+      font-size: 28px;
       text-align: center;
     }
 
@@ -1378,7 +1281,7 @@ section {
       margin-top: 50px;
     }
     /* ----------------------------------------------
-    * 3. About CSS 
+    * 3. Resume CSS 
     -----------------------------------------------*/
     .resume .nav.nav-pills {
       width: 78%;
@@ -1422,7 +1325,15 @@ section {
     position: relative;
     cursor: pointer;
     margin-bottom: 50px;
-    margin-left: 15px;
+    margin-left: 12px;
+  }
+
+  /* ----------------------------------------------
+  * 5. Projects CSS 
+  -----------------------------------------------*/
+  .projects .project-img {
+    position: relative;
+    display: flex;
   }
 
   /* ----------------------------------------------
@@ -1432,6 +1343,12 @@ section {
     font-size: 54px;
     transform: translateY(0px);
     opacity: 0.1;
+  }
+
+  .testimonials .carousel .text-center .img-container {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   /* ----------------------------------------------
@@ -1451,9 +1368,23 @@ section {
 
 @media only screen and(max-width: 375px) {
 
+
   .banner .column-right img{
-    position: absolute;
+    display: none;
+    /* position: absolute;
     width: 100px;
-    height: 100px;
+    height: 100px; */
+  }
+
+  .banner h1 {
+    font-size: 18px;
+  }
+
+  .banner h2 {
+    font-size: 14px !important;
+  }
+
+  .banner p {
+    font-size: 12px;
   }
 }

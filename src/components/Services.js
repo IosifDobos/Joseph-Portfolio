@@ -29,7 +29,7 @@ export const Services = () => {
                     <div className="main" >
                         <div className="service">
                             <div className="service-logo">
-                                <FcTreeStructure size={75} className='icons' />
+                                <FcTreeStructure size={75} className='algo-icons' />
                             </div>
                             <h4>Algorithm & Data Structures</h4>
                             <p>

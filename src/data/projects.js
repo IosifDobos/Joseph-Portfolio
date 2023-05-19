@@ -7,7 +7,7 @@ const projects = [
         imageUrl: require('../assets/img/ms-skincare.png'),
         demoUrl: 'https://msskincarebeautyclinic.com/',
         githubUrl: '',
-        tools: 'WordPress, Hostgator',
+        tools: ['WordPress, Hostgator'],
 
     },
     {
@@ -18,7 +18,7 @@ const projects = [
         imageUrl: require('../assets/img/pabo-ltd.png'),
         demoUrl: 'https://paboltd.com/',
         githubUrl: '',
-        tools: 'WordPress, Hostgator',
+        tools: ['WordPress, Hostgator'],
     },
     {
         id: '3',
@@ -28,7 +28,7 @@ const projects = [
         imageUrl: require('../assets/img/eCommerce-img.png'),
         demoUrl: '',
         githubUrl: '',
-        tools: 'React, NodeJS, Express, MongoDB, Stripe, Netlify, Heroku, REST API, JWT',
+        tools: ['React, NodeJS, Express, MongoDB, Stripe, Netlify, Heroku, REST API, JWT'],
     },
     {
         id: '4',
@@ -78,7 +78,7 @@ const projects = [
         imageUrl: require('../assets/img/medieval-game.png'),
         demoUrl: 'https://www.youtube.com/watch?v=YtvvlE8aiAs&t=218s',
         githubUrl: 'https://github.com/IosifDobos/JoeMedievalGame',
-        tools: 'Unity 3D, C#, Graphic Design',
+        tools: ['Unity 3D, C#, Graphic Design'],
     },
     {
         id: '9',
@@ -88,7 +88,7 @@ const projects = [
         imageUrl: require('../assets/img/library-website.jpeg'),
         demoUrl: '#',
         githubUrl: 'https://github.com/IosifDobos/Web-Development',
-        tools: 'HTML, CSS, PHP, MySQL',
+        tools: ['HTML, CSS, PHP, MySQL'],
     },
     {
         id: '10',

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTypewriter } from 'react-simple-typewriter';
-import { AiFillGithub, AiFillFolderOpen } from 'react-icons/ai'
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 // assets
@@ -29,8 +28,8 @@ export const Home = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
-                                    <h1 className='title-name'>Hi! I'm Joseph</h1>
-                                    <h2 className='job-description'>And I'm a <span>{text}</span></h2>
+                                    <h1 className='title-name'>Hi! I'm Joseph,</h1>
+                                    <h2 className='job-description'>and I'm a <span>{text}</span></h2>
                                     <p>
                                         Graduate student at Technological University Dublin with a degree in Computer Science.
                                         I love to build things and discover new technologies. As part of my degree I have built
@@ -46,8 +45,8 @@ export const Home = () => {
                                     </div>
 
                                     <div className="link-btn">
-                                        <a href='#projects' className='btn-md'>Projects<AiFillGithub size={25} className='icons' /></a>
-                                        <a href="#resume" className="btn-md btn-space">My Resume<AiFillFolderOpen size={25} className='icons' /></a>
+                                        <a href='#projects' className='btn-md'>Projects</a>
+                                        <a href="#resume" className="btn-md btn-space">My Resume</a>
                                     </div>
                                 </div>}
                         </TrackVisibility>

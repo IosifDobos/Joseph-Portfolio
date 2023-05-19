@@ -4,12 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // components
 import { NavBar } from './components/NavBar';
 import { Home } from './components/Home';
-import { About } from './components/About';
-import { Services } from './components/Services';
+import About from './components/About';
 import { Skills } from './components/Skills';
 import { Resume } from './components/Resume';
 import { Projects } from './components/Projects';
-import { Testimonials } from './components/Testimonials';
+import Testimonials from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -19,7 +18,6 @@ function App() {
       <NavBar />
       <Home />
       <About />
-      <Services />
       <Skills />
       <Resume />
       <Projects />
