@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../utils/motion';
 import { SectionWrapper } from "./hoc";
 // assets
-import aboutImg from '../assets/img/github_image.png';
+import aboutImg from '../assets/img/Joseph.png';
 import { services } from '../constants'
 
 const ServiceCard = ({ index, title, icon }) => {

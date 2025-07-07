@@ -13,7 +13,7 @@ import headerImg from '../assets/img/header-img.svg'
 export const Home = () => {
 
     const [text] = useTypewriter({
-        words: ["Freelancer", "Developer", "Web Designer"],
+        words: ["Freelancer", "Full-stack Developer", "Web Designer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -27,15 +27,13 @@ export const Home = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <span className="tagline">Welcome to my Portfolio</span>
+                                    <span className="tagline">IT Specialist</span>
                                     <h1 className='title-name'>Hi! I'm Joseph,</h1>
                                     <h2 className='job-description'>and I'm a <span>{text}</span></h2>
                                     <p>
-                                        Graduate student at Technological University Dublin with a degree in Computer Science.
-                                        I love to build things and discover new technologies. As part of my degree I have built
-                                        numerous projects which can be found on Projects section by clicking on the button
-                                        bellow or by visiting my GitHub page. Also, for more information about my
-                                        work experience, kills and education, click on the Resume button bellow.
+                                        Passionate about technology and innovation, I thrive on building impactful solutions and exploring cutting-edge technologies. Throughout my academic journey and beyond, I have developed numerous projects, showcasing my technical expertise and creativity.
+                                        In addition to my academic achievements, I have collaborated with multiple clients to deliver tailored software solutions that address their unique business challenges. My portfolio reflects a diverse range of experiences, highlighting my ability to adapt and excel in dynamic environments.
+                                        Explore my Projects section to view my work or visit my GitHub for code samples. For more details on my professional experience, skills, and education, feel free to check out my Resume below
                                     </p>
                                     <div className="social-icon">
                                         <a href="https://www.linkedin.com/in/iosif-dobos/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
